@@ -1,0 +1,139 @@
+// Diplomados Custom
+
+$width: 180px;
+$height: 169px;
+
+
+.diplomado{
+	
+	text-align: center;
+	margin: 2em 1em;
+	border: 3px solid $white;
+	border-radius: 12px;
+
+	.logo{
+		background-image: url('../img/logo-innova.svg');
+    	background-repeat: no-repeat; 
+    	margin: 0 auto;
+    	background-size: $width $height;
+    	width: $width;
+    	height: $height;
+    	filter: opacity(.1);
+	}
+	
+	.logo-priv{
+		filter: hue-rotate(5deg);
+	}
+
+	.logo-pub{
+		filter: hue-rotate(15deg);
+		-webkit-transform: rotate(180deg);
+		-moz-transform: rotate(180deg);
+		-ms-transform: rotate(180deg);
+		-o-transform: rotate(180deg);
+		transform: rotate(180deg);
+	}
+
+	h2{
+		color: $brand-primary;
+		text-transform: uppercase;
+		font-weight: 900;
+		font-size: 20px;
+		text-align: center;
+	}
+}
+
+ul.nav li.logo{
+	a{
+		padding: .78em;
+		margin: 0;
+	}
+		img{
+		width: 36px;
+		height: 36px;
+		transition: all .5s ease;
+	}
+}
+
+.top-nav-collapse .containter .navbar-collapse ul.nav li.logo a img{
+	width: 26px;
+	height: auto;
+
+}
+
+#intro{
+	margin-top: 90px;
+}
+
+.scroll-section{
+	min-height: 500px;
+	padding: 5rem 0;
+
+	&:nth-child(odd){
+		background-color: transparentize($brand-primary, .95);
+	}
+
+	h1{
+		font-weight: 200;
+		text-transform: uppercase;
+		margin-bottom: 1em;
+		&.title{
+			font-weight: 900 ;
+			color: $brand-primary;
+		}
+	}
+}
+
+footer{
+	padding: 2em 0;
+	background-color: $brand-primary;
+	color: $white;
+
+	a{
+		color: $white;
+		font-weight: bolder;
+		&:hover{
+			color: ligthen($brand-primary, 70%);
+		}
+	}
+}
+
+// breakpoint and up
+
+@media (min-width: $screen-md){
+    .navbar {
+        padding: 20px 0;
+        -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
+        -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
+        transition: background .5s ease-in-out,padding .5s ease-in-out;
+    }
+
+	ul.nav li.logo{
+		a{
+			
+		}
+		img{
+			background-color: transparent;
+		}
+	}
+
+	.top-nav-collapse .containter .navbar-collapse ul.nav li.logo a img{
+		width: 26px;
+		height: auto;
+
+	}
+    
+    .intro{margin: 90px 0 0 0;}
+
+    .top-nav-collapse {
+        padding: 0;
+    }
+
+	$unit: 24px;
+
+    .eat-1-top{margin-top: -1 * $unit}
+	.eat-2-top{margin-top: -2 * $unit}
+	.eat-3-top{margin-top: -3 * $unit}
+	.eat-4-top{margin-top: -4 * $unit}
+	.eat-5-top{margin-top: -5 * $unit}
+}

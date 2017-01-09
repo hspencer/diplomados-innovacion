@@ -1,0 +1,15 @@
+
+/*!
+* Innovación PUCV
+* diseño: Herbert Spencer
+*/
+
+// run:
+// sass --watch sass/innovacion-pucv.scss:css/innovacion-pucv.css --style compressed
+
+@import "fonts";
+@import "variables-custom";
+@import "bootstrap";
+@import "fontawesome";
+@import "custom";
+@import "auxi";
