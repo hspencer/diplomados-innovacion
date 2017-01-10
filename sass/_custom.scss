@@ -1,87 +1,162 @@
 // Diplomados Custom
 
+//-----
+
+.content-section .video-section{
+    max-height: 800px;
+    padding: 110px 0 32px;
+    }
+
+.video-section .pattern-overlay {
+	background-color: rgba(71, 71, 71, 0.59);
+	padding: 110px 0 32px;
+	min-height: 496px;
+	/* Incase of overlay problems just increase the min-height*/
+}
+.video-section h1, .video-section h3{
+	text-align:center;
+	color:#fff;
+}
+.video-section h1{
+	font-size:110px;
+	font-family: 'Buenard', serif;
+	font-weight:bold;
+	text-transform: uppercase;
+	margin: 40px auto 0px;
+	text-shadow: 1px 1px 1px #000;
+	-webkit-text-shadow: 1px 1px 1px #000;
+	-moz-text-shadow: 1px 1px 1px #000;
+}
+.video-section h3{
+	font-size: 25px;
+	font-weight:lighter;
+	margin: 0px auto 15px;
+}
+.video-section .buttonBar{display:none;}
+.player {font-size: 1px;}
+
+//-----
+
 $width: 180px;
 $height: 169px;
 
 
-.diplomado{
-	
-	text-align: center;
-	margin: 2em 1em;
-	border: 3px solid $white;
-	border-radius: 12px;
-
-	.logo{
-		background-image: url('../img/logo-innova.svg');
-    	background-repeat: no-repeat; 
-    	margin: 0 auto;
-    	background-size: $width $height;
-    	width: $width;
-    	height: $height;
-    	filter: opacity(.1);
+.navbar-brand{
+	span{
+		display: none;
 	}
-	
-	.logo-priv{
-		filter: hue-rotate(5deg);
+	img{
+		-webkit-transition: all .5s ease-in-out;
+        -moz-transition: all .5s ease-in-out;
+        transition: all .5s ease-in-out;
+        width: 64px;
+        height: 64px;
+        margin-top: 0;
+	}
+}
+
+.top-nav-collapse{
+	.navbar-brand{
+		img{
+			width: 32px;
+			height: 32px;
+			margin-top: -2px;
+		}
+	}
+}
+
+
+#intro{
+	@include clearfix;
+
+	.video-container{
+		
+		float: left;
+		z-index: -100;
+		overflow: hidden;
+		
+		video{
+			position: relative;
+		    top: 0;
+		    left: 0;
+		    min-width: 100%;
+		    min-height: 100%;
+		    width: auto;
+		    height: auto;
+		    // transform: translateX(-50%) translateY(-50%);
+		}
 	}
 
-	.logo-pub{
-		filter: hue-rotate(15deg);
-		-webkit-transform: rotate(180deg);
-		-moz-transform: rotate(180deg);
-		-ms-transform: rotate(180deg);
-		-o-transform: rotate(180deg);
-		transform: rotate(180deg);
+	.container{
+		
+		z-index: 10;
+		padding-top: 90px;
+
+		h1{
+			font-weight: 200;
+			text-transform: uppercase;
+			margin-bottom: 1em;
+			&.title{
+				font-weight: 100 ;
+				font-size: 2.5em;
+				color: $brand-primary;
+			}
+		}
+	}
+}
+
+.scroll-section{
+	min-height: 20rem;
+	
+	padding: 6rem 0;
+
+	&:first-child{
+		padding-top: 12rem;
+	}
+
+	&:nth-child(odd){
+		background-color: transparentize($brand-primary, .9);
 	}
 
 	h2{
 		color: $brand-primary;
 		text-transform: uppercase;
-		font-weight: 900;
-		font-size: 20px;
-		text-align: center;
-	}
-}
-
-ul.nav li.logo{
-	a{
-		padding: .78em;
-		margin: 0;
-	}
-		img{
-		width: 36px;
-		height: 36px;
-		transition: all .5s ease;
-	}
-}
-
-.top-nav-collapse .containter .navbar-collapse ul.nav li.logo a img{
-	width: 26px;
-	height: auto;
-
-}
-
-#intro{
-	margin-top: 90px;
-}
-
-.scroll-section{
-	min-height: 500px;
-	padding: 5rem 0;
-
-	&:nth-child(odd){
-		background-color: transparentize($brand-primary, .95);
 	}
 
-	h1{
-		font-weight: 200;
+	.diplomado{
+	margin: 1em .5em;
+	padding: 1em;
+	border: 2px solid $white;
+	border-radius: 3px;
+
+	.logo{
+		margin-top: 19px;
+	}
+
+	h2{
+		width: auto;
+		color: $white;
 		text-transform: uppercase;
-		margin-bottom: 1em;
-		&.title{
-			font-weight: 900 ;
-			color: $brand-primary;
+		font-weight: 300;
+		font-size: 20px;
+	}
+
+	&.priv{
+		background-color: $brand-primary;
+	}
+
+	&.pub{
+		background-color: $brand-success;
+		.logo{
+			filter: hue-rotate(15deg);
+			-webkit-transform: rotate(180deg);
+			-moz-transform: rotate(180deg);
+			-ms-transform: rotate(180deg);
+			-o-transform: rotate(180deg);
+			transform: rotate(180deg);
 		}
 	}
+}
 }
 
 footer{
@@ -108,20 +183,14 @@ footer{
         transition: background .5s ease-in-out,padding .5s ease-in-out;
     }
 
-	ul.nav li.logo{
-		a{
-			
-		}
-		img{
-			background-color: transparent;
+    .navbar-brand{
+    	img{
+			width: 52px;
+			height: 52px;
+			margin-top: -12px;
 		}
 	}
 
-	.top-nav-collapse .containter .navbar-collapse ul.nav li.logo a img{
-		width: 26px;
-		height: auto;
-
-	}
     
     .intro{margin: 90px 0 0 0;}
 
