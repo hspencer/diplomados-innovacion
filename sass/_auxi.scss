@@ -1,7 +1,17 @@
-tcenter{
+.tcenter{
 	text-align: center;
 }
 
-uc{
+.uc{
 	text-transform: uppercase;
+}
+
+.center-vertical{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	> div{
+		align-self: flex-end;
+	}
 }

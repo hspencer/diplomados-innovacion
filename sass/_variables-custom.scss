@@ -2,6 +2,7 @@
 
 $bootstrap-sass-asset-helper: false;
 $white: rgb(250, 252, 255);
+$black: rgb(0, 14, 25);
 $gray-base: rgb(0, 2, 3);
 $gray-darker: lighten($gray-base, 13.5%);
 $gray-dark: lighten($gray-base, 20%);
@@ -14,6 +15,11 @@ $brand-info: rgb(43, 110, 191);
 $brand-warning: rgb(232, 146, 25);
 $brand-danger: rgb(244, 22, 122);
 $body-bg: rgb(245, 255, 255);
+
+
+$color-priv: $brand-primary;
+$color-pub: $brand-success;
+
 $text-color: $gray-darker;
 $link-color: $brand-primary;
 $link-hover-color: $link-color;
